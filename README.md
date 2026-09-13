@@ -4,7 +4,9 @@
 
 OpenAL add-on files for Mikohime Java 27+ and Mikohime Unofficial Java 28+. OpenAl add-on version 1.2.5.1.
 
-Extract into .\Starsector\ folder and overwrite files in the `mikohime` folder.Run `oalinst.exe` to install OpenAL. Run `Configure_Audio.bat` to open the bundled audio configuration utility.
+Extract into .\Starsector\ folder and overwrite files in the `mikohime` folder. Run `oalinst.exe` to install OpenAL. Run `Configure_Audio.bat` to open the bundled audio configuration utility.
+
+The latest version of Mikohime Unofficial Java 28+ (v0.8.0 onwards) has an option to download, install, and uninstall directly from within the configurator.
 
 ## Downloads
 
