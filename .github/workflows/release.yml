@@ -18,7 +18,10 @@ jobs:
         shell: pwsh
         run: |
           $archive = "Mikohime-OpenAL-Addon-${{ github.ref_name }}.zip"
-          Compress-Archive -Path Configure_Audio.bat, oalinst.exe, mikohime -DestinationPath $archive
+          New-Item -ItemType Directory -Force LICENSES | Out-Null
+          Invoke-WebRequest -Uri "https://www.gnu.org/licenses/old-licenses/lgpl-2.0.txt" -OutFile "LICENSES/LGPL-2.0.txt"
+          Invoke-WebRequest -Uri "https://www.gnu.org/licenses/lgpl-3.0.txt" -OutFile "LICENSES/LGPL-3.0.txt"
+          Compress-Archive -Path README.md, THIRD_PARTY_NOTICES.md, LICENSES, Configure_Audio.bat, oalinst.exe, mikohime -DestinationPath $archive
           $hash = (Get-FileHash $archive -Algorithm SHA256).Hash
           "$hash  $archive" | Set-Content "$archive.sha256"
 
